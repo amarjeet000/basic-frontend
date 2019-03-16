@@ -8,3 +8,7 @@
  ::initialize-db
  (fn [_ _]
    db/default-db))
+
+
+(defn increase-count []
+  (swap! db/default-db assoc-in [:name] (inc (:name @db/default-db))))

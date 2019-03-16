@@ -1,4 +1,6 @@
-(ns basic.db)
+(ns basic.db
+  (:require [reagent.core :as r]))
+
 
 (def default-db
-  {:name "re-frame"})
+  (r/atom {:name 0}))

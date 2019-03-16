@@ -5,7 +5,8 @@
                  [re-frame "0.10.6"]
                  [compojure "1.5.0"]
                  [yogthos/config "0.8"]
-                 [ring "1.4.0"]]
+                 [ring "1.4.0"]
+                 [soda-ash "0.83.0"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]]
 
