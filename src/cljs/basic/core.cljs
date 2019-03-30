@@ -19,6 +19,5 @@
                   (.getElementById js/document "app")))
 
 (defn ^:export init []
-  ;(re-frame/dispatch-sync [::events/initialize-db])
   (dev-setup)
   (mount-root))

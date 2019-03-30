@@ -1,6 +1,5 @@
 (ns basic.queries
   (:require
-    [re-frame.core :as re-frame]
     [basic.db :as db]))
 
 ;; Counter example

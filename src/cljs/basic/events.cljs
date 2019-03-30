@@ -1,7 +1,6 @@
 (ns basic.events
   (:require
-   [re-frame.core :as re-frame]
-   [basic.db :as db]))
+    [basic.db :as db]))
 
 
 ;; Counter example

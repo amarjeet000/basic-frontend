@@ -1,6 +1,7 @@
-# basic
+# Blog application demo in ClojureScript
 
-A [re-frame](https://github.com/Day8/re-frame) application designed to ... well, that part is up to you.
+A basic, yet suffient, blog app written in ClojureScript - created for the [Workshop at Bangalore Clojure meetup on April 6, 2019](https://www.meetup.com/Bangalore-Clojure-User-Group/events/259722345/).
+
 
 ## Development Mode
 

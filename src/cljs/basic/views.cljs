@@ -1,6 +1,5 @@
 (ns basic.views
   (:require
-    [re-frame.core :as re-frame]
     [basic.queries :as q]
     [basic.events :as events]
     [soda-ash.core :as sa]
