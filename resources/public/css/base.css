@@ -2,12 +2,12 @@ body {
   font-family: 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 30px;
   -webkit-font-smoothing: antialiased;
   font-size: 1.125em;
   color: #333;
   line-height: 1.5em;
-  background-color: #F5F5F5;
+  background-color: #CFD8DC;
 }
 
 #app-body {
@@ -18,20 +18,31 @@ body {
   background-color: #FFFFFF;
 }
 
-h1, h2, h3 {
+#side-bar {
+  margin: 0 auto;
+  min-width: 100px;
+	max-width: 800px;
+  min-height: 100px;
+  padding: 10px;
+  border-color: #42434D;
+  border: 1px solid #42434D;
+  border-radius: 5px;
+  background-color: #FFFFFF;}
+
+h1 {
   color: #00695C;
   text-align: center;
-}
-h1 {
-  font-size: 2.5em
+  font-size: 2.5em;
 }
 
 h2 {
-  font-size: 2em
+  color: #00695C;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 1.5em
+  color: #00695C;
+  font-size: 1.5em;
 }
 
 a {

@@ -6,7 +6,8 @@
                  [compojure "1.5.0"]
                  [yogthos/config "0.8"]
                  [ring "1.4.0"]
-                 [soda-ash "0.83.0"]]
+                 [soda-ash "0.83.0"]
+                 [markdown-to-hiccup "0.6.2"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]]
 

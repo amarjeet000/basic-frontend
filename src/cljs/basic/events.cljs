@@ -4,11 +4,24 @@
    [basic.db :as db]))
 
 
-(re-frame/reg-event-db
- ::initialize-db
- (fn [_ _]
-   db/default-db))
-
+;; Counter example
+;; -------------------------------------------------------------
 
 (defn increase-count []
-  (swap! db/default-db assoc-in [:name] (inc (:name @db/default-db))))
+  (swap! db/total-count assoc-in [:name] (inc (:name @db/total-count))))
+
+
+;; Blog App
+;; -------------------------------------------------------------
+
+(defn read-article [article]
+  (swap! db/blog-db assoc :current-article article :current-page :article-page))
+
+(defn visit-page [page]
+  (swap! db/blog-db assoc :current-page page))
+
+(defn temp-email [email]
+  ())
+
+(defn save-email [email]
+  ())
