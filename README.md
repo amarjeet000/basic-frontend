@@ -34,9 +34,9 @@ Wait a bit, then browse to [http://localhost:3449](http://localhost:3449).
 9. Deploy to Heroku: `git push heroku master`
 10. In order to push further changes, just redo steps 6, 7, 8, and 9 after any changes you make.
 
-Now, you can see your app running on the url mentioned in the `Domains and certificates` of the `settings` page. As a shortcut, yo could also run `heroku open`.
+Now, you can see your app running on the url mentioned in the `Domains and certificates` of the `settings` page. As a shortcut, you could also run `heroku open`.
 
-If you wish to keep your app's repo to your personal git repo, you just have to change the remote url by running `git remote add origin <git-repo-url>`, followed by:
+If you wish to keep your app in your personal git repo, you just have to add the remote url of your newly created git repo by running `git remote add origin <your-git-repo-url>`, and do the following:
 
   - Steps 6, 7, and 8 from above
   - Then, `git push -u origin master`. Rather than deploying to Heroku, you are pushing updates to your git repo.
