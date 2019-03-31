@@ -7,15 +7,17 @@ body {
   font-size: 1.125em;
   color: #333;
   line-height: 1.5em;
-  background-color: #CFD8DC;
+  background-color: #616161;
 }
 
 #app-body {
-  max-width: 900px;
+  max-width: 1000px;
   min-height: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 30px 0 30px;
   background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 #424242;
 }
 
 #side-bar {
@@ -23,11 +25,11 @@ body {
   min-width: 100px;
 	max-width: 800px;
   min-height: 100px;
-  padding: 10px;
+  padding: 20px;
   border-color: #42434D;
   border: 1px solid #42434D;
   border-radius: 5px;
-  background-color: #FFFFFF;}
+  background-color: #6f6f6f;}
 
 h1 {
   color: #00695C;

@@ -99,12 +99,14 @@
   (let [email (q/temp-email)]
     [:div
      [sa/Form
-      [sa/FormInput {:label "Email"
-                     :type "email"
+      [sa/FormInput {:type "email"
+                     :placeholder "Email"
                      :required true
                      :onChange #(events/temp-email (-> % .-target .-value))}]
       [sa/FormButton {:content "SUBSCRIBE"
-                      :color "teal"
+                      :color "pink"
+                      :icon "mail"
+                      :size "small"
                       :onClick #(events/save-email email)}]]]))
 
 
@@ -116,7 +118,8 @@
     [sa/GridRow
      [sa/GridColumn {:width "11"}
       [home]]
-     [sa/GridColumn {:width "5"}
+     [sa/GridColumn {:width "5"
+                     :textAlign "center"}
       [:div#side-bar
        [subscription-form]]
       [:br]]]]])
@@ -135,7 +138,7 @@
 ;; Main view
 (defn main-panel []
   (let [v (q/current-page)]
-    [:div
+    [:div#app-body
      [logo]
      [:br]
      [menu]
