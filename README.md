@@ -2,6 +2,10 @@
 
 A basic, yet suffient, blog app written in ClojureScript - created for the [Workshop at Bangalore Clojure meetup on April 6, 2019](https://www.meetup.com/Bangalore-Clojure-User-Group/events/259722345/).
 
+The idea is that people should be able to build on top of it.
+
+Blogs are just markdown files in the `resources/md` folder, and any images used are in the `resources/public/img` folder. Therefore, no database setup is required. When you add a new blog, just update the `articles` data in the `src/cljs/db.cljs` file.
+
 
 ## Development Mode
 
@@ -16,7 +20,8 @@ Figwheel will automatically push cljs changes to the browser.
 
 Wait a bit, then browse to [http://localhost:3449](http://localhost:3449).
 
-## Production Build
+
+## Production Build (for any infrastructure that deploys `uberjar`)
 
 ```
 lein clean
@@ -25,24 +30,31 @@ lein with-profile prod uberjar
 
 That should compile the clojurescript code first, and then create the standalone jar.
 
-When you run the jar you can set the port the ring server will use by setting the environment variable PORT.
-If it's not set, it will run on port 3000 by default.
+When you run the jar you can set the port the ring server will use by setting the environment variable PORT. If it's not set, it will run on port 3000 by default.
 
-To deploy to heroku, first create your app:
 
-```
-heroku create
-```
+### Deploy on Heroku:
 
-Then deploy the application:
+1. Create [heroku free account](https://www.heroku.com)
+2. Install [Heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-clojure#set-up)
+3. Login to Heroku: `heroku login`. Make sure you are in the app directory at the terminal.
+4. Create a Heroku app: `heroku create`. You can see your created app in your Heroku account dashboard. Now, go to your heroku dashboard, and click on the app you created. Then go to the `settings` tab and check the `name` section - if you would like to edit, do it now.
+5. If you haven't initialized `git` for you app, run `git init`.
+6. Run `lein clean`
+7. Add all of your app files for commit: `git add -A`
+8. Commit all files: `git commit -m "add some meaningful text here"`
+9. Deploy to Heroku: `git push heroku master`
+10. In order to push further changes, just redo steps 6, 7, 8, and 9 after any changes you make.
 
-```
-git push heroku master
-```
+Now, you can see your app running on the url mentioned in the `Domains and certificates` of the `settings` page. As a shortcut, yo could also run `heroku open`.
 
-To compile clojurescript to javascript:
+If you wish to keep your app's repo to your personal git repo, you just have to change the remote url by running `git remote add origin <git-repo-url>`, followed by:
 
-```
-lein clean
-lein cljsbuild once min
-```
+  - Steps 6, 7, and 8 from above
+  - Then, `git push -u origin master`. Rather than deploying to Heroku, you are pushing updates to your git repo.
+
+
+
+STEP 6: Map your git repo (your app) to the remote Heroku's git. You can find the remote url by visiting the [settings tab of the app](https://dashboard.heroku.com/apps/fathomless-eyrie-14067/settings), and in the `Info` section on the settings page, look for `Heroku Git URL`. Then, run `git add remote
+
+
