@@ -7,7 +7,7 @@
 ;; -------------------------------------------------------------
 
 (defn increase-count []
-  (swap! db/total-count assoc-in [:name] (inc (:name @db/total-count))))
+  (swap! db/total-count assoc-in [:count] (inc (:count @db/total-count))))
 
 
 ;; Blog App

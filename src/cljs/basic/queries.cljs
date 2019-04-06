@@ -6,7 +6,7 @@
 ;; -------------------------------------------------------------
 
 (defn counter []
-  (:name @db/total-count))
+  (:count @db/total-count))
 
 
 ;; Blog App

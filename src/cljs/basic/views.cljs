@@ -10,10 +10,11 @@
 ;; -------------------------------------------------------------
 
 (defn counter-view []
-  [:div
-   [:h1 "Hello again from " (q/counter)]
-   [sa/Button {:content "Click me"
-               :onClick #(events/increase-count)}]])
+  (let [c (q/counter)]
+    [:div
+     [:h1 "Current count is " c]
+     [sa/Button {:content "Click me"
+                 :onClick #(events/increase-count)}]]))
 
 
 
